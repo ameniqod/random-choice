@@ -1,0 +1,10 @@
+import random
+
+password = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+length_password = int(input())
+generate_password = ''
+
+for i in range(length_password):
+    generate_password += random.choice(password)
+
+print(generate_password)
