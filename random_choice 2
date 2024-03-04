@@ -1,0 +1,26 @@
+import random
+
+login = {}
+password = '1234567890'
+done_password = ''
+
+for i in range(random.randint(8,10)):
+    done_password += random.choice(password)
+
+print(done_password,'пароль от почты')
+
+email = 'qwertyuiopasdfghjklzxcvbnm1234567890_'
+done_email = ''
+
+for i in range(random.randint(9,12)):
+    done_email += random.choice(email)
+done_email += '@gmail.com'
+print(done_email,'Почта для аккаунта')
+
+login[done_password] = done_email
+
+if input('Введи пароль от аккаунта') in login.keys():
+    print('Successful!')
+
+else:
+    print('dont')
